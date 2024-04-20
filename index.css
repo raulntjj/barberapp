@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease; /* Aplicar a animação de carregamento à página */
+    padding: 0; /* Remover o preenchimento do corpo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #4b3832;
+    color: white;
+}
+
+.section-container {
+    display: grid;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #604c44;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    margin: 20px auto 0px auto;
+    padding: 20px 300px;
+    background-color: #604c44;
+    color: #fff;
+    justify-content: space-between;
+}
+
+:root {
+    --primary-color: #4b3832;
+    --secondary-color: #7b5e57;
+}
+
+/* Adicionar uma animação de carregamento suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adicionar transições suaves para hover em links */
+a,
+a:visited,
+a:link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição de cor suave */
+}
+
+a:hover {
+    color: #ddd; /* Mudar a cor ao passar o mouse */
+}
+
+/* Estilizar botões com bordas arredondadas e sombras */
+input[type="submit"] {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionar sombra suave */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Adicionar transições */
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05); /* Efeito de aumento sutil ao passar o mouse */
+    background-color: #5b483f; /* Mudar a cor de fundo ao passar o mouse */
+}
+
+/* Adicionar bordas arredondadas aos inputs */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color); /* Corrigindo a cor da borda */
+    transition: border-color 0.3s ease; /* Transição de cor de borda suave */
+}
+
+/* Mudar a cor da borda ao focar */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: var(--primary-color); /* Mudar a cor da borda ao focar */
+}
+
+/* Media Query para Celulares */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0px; /* Adicionar um pequeno preenchimento para dispositivos móveis */
+    }
+    .section-container {
+        width: 90%; /* Ajustar a largura para ocupar toda a largura da tela */
+        max-width: none; /* Remover a largura máxima para dispositivos móveis */
+    }
+
+    .footer-container {
+        display: flex;
+        margin: 20px auto 0px auto;
+        padding: 20px;
+        background-color: #604c44;
+        color: #fff;
+        justify-content: space-between;
+    }
+}

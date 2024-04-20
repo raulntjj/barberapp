@@ -1,0 +1,72 @@
+.title{
+    display: flex;
+    justify-content:left;
+}
+
+.title h1{
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Adicionando flex-wrap para que os elementos possam ser envolvidos para a próxima linha se não houver espaço suficiente */
+}
+
+.form-container > div {
+    width: 48%; /* Definindo a largura dos elementos filhos para 48% */
+}
+
+.form-container label,
+.form-container input {
+    width: 100%; /* Definindo a largura de labels e inputs para ocupar toda a largura do elemento pai */
+}
+
+.form-container label {
+    margin-bottom: 10px; /* Adicionando margem inferior para separar os labels */
+}
+
+.form-container input {
+    margin-bottom: 20px; /* Adicionando margem inferior para separar os inputs */
+}
+
+a, a:visited, a:link{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+input[type=text],
+input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+input[type=submit]:hover{
+    transform: scale(1.015);
+
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    background-color: 1px solid var(--color1);
+    background-color: var(--color5);
+    border-radius: 5px;
+    color: white;
+}

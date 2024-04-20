@@ -1,0 +1,57 @@
+.section-container {
+    justify-content: center;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 20px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #4b3832; /* Cor de fundo da lista de itens */
+  padding: 10px 0;
+  z-index: 1000; /* Certifique-se de que o menu esteja acima de outros elementos */
+}
+
+.menu-items a {
+  display: block;
+  padding: 10px 20px;
+  color: white; /* Cor do texto dos itens do menu */
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+.menu-items a:hover {
+  background-color: #7b5e57; /* Cor de fundo ao passar o mouse */
+}
+
+.menu-open {
+  display: block !important; /* !important é necessário para anular a regra display: none */
+}
+
+.bar.active:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.bar.active:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
